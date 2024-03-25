@@ -1,0 +1,305 @@
+:root {
+    --orange: #ff3f00;
+    --orange-dark: #E1561F80;
+    --black: #232323;
+    --white01: #FFFFFF;
+    --white02: #FBFBFB;
+    --white03: #F9F9F9;
+    --gray01: #F4F4F4;
+    --gray02: #EAEAEA;
+    --gray03: #E2E2E2;
+    --box-shadow-length: 4.23px 8.98px 30px 0px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px red solid; */
+}
+
+.light {
+    font-family: 'Pathway Extreme Light', 'sans-serif';
+}
+
+.medium {
+    font-family: 'Pathway Extreme Medium', 'sans-serif';
+}
+
+.extrabold {
+    font-family: 'Pathway Extreme ExtraBold', 'sans-serif';
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    background-color: var(--white03);
+    color: var(--black);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    width: 80%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    background-color: var(--white02);
+    border: 1px solid var(--gray03);
+    border-radius: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    transition: transform 300ms ease-out;
+}
+
+/* DESKTOP ONLY EFFECTS */
+@media only screen and (min-width: 1024px){
+    .logo:hover {
+        transform: scale(1.1);
+    }
+
+    #copy:hover {
+        color: var(--white01);
+        background-color: var(--orange);
+        box-shadow: var(--box-shadow-length) var(--orange-dark);
+        cursor: pointer;
+    }
+
+    #copy:active {
+        color: var(--orange);
+        background-color: var(--white01);
+        transform: scale(0.9);
+    }
+}
+
+
+#github-mobile {
+    display: none;
+}
+
+#github {
+    padding: 0.5rem 1rem;
+    color: var(--orange);
+    font-size: 15px;
+    background-color: var(--white01);
+    border: 1px solid var(--orange);
+    border-radius: 50px;
+    transition: color 300ms ease-out,
+                background-color 300ms ease-out;
+}
+
+#github:hover {
+    color: var(--white02);
+    background-color: var(--orange);
+    box-shadow: var(--box-shadow-length) var(--orange-dark);
+}
+
+.fa-github {
+    padding-right: 0.5rem;
+}
+
+/* MOBILE HEADER */
+@media only screen and (max-width: 480px) {
+    .banner {
+        width: 90%;
+        padding: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .logo {
+        transform: scale(0.8);
+    }
+
+    #github-mobile {
+        display: block;
+        padding: 0.5rem;
+        color: var(--white01);
+        background-color: var(--orange);
+        border-radius: 50%;
+    }
+
+    #github {
+        display: none;
+    }
+
+    .fa-github {
+        padding: 50% 0 0 0;
+        aspect-ratio: 1/1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+h1, p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.first-title {
+    font-size: 64px;
+    font-weight: lighter;
+}
+
+.second-title {
+    font-size: 64px;
+    color: var(--orange);
+}
+
+.output-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--white01);
+    border: 1px solid var(--orange);
+    border-radius: 50px;
+    box-shadow: var(--box-shadow-length) var(--orange-dark);
+    padding: 1rem 1.5rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+output {
+    font-size: 1.2em;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#copy {
+    padding: 0.65rem 1.5rem;
+    color: var(--orange);
+    font-size: 15px;
+    background-color: var(--white01);
+    border: 1px solid var(--orange);
+    border-radius: 50px;
+    transition: color 300ms ease-out,
+                background-color 300ms ease-out;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    color: var(--orange);
+    background-color: var(--white02);
+    border: 3px solid var(--gray01);
+    border-radius: 24px;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+.checkbox-group {
+    border: none;
+}
+
+.checkbox-group legend {
+    margin-bottom: 1rem;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* MOBILE MAIN CONTENT */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .first-title,
+    .second-title {
+        font-size: 40px;
+    }
+
+    .output-container {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    #copy {
+        color: var(--white01);
+        background-color: var(--orange);
+    }
+
+    #copy:active {
+        transform: scale(0.9);
+    }
+
+    .checkbox-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .checkbox-container > custom-checkbox {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+footer {
+    width: 100%;
+    min-height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white01);
+    background-color: var(--orange);
+}
+
+.wavy {
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    top: -75%;
+    z-index: -1;
+    background-color: var(--orange);
+    --size-unitless: 50;
+    --p-unitless: 37.5;
+    --size: calc(var(--size-unitless) * 1px);
+    --p: calc(var(--p-unitless) * 1px);
+    --R: calc(sqrt(var(--p-unitless) * var(--p-unitless) + var(--size-unitless) * var(--size-unitless)) * 1px);
+    mask:
+        radial-gradient(var(--R) at 50% calc(var(--size) + var(--p)), #000 99%, #0000 101%)
+            calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+        radial-gradient(var(--R) at 50% calc(-1*var(--p)), #0000 99%, #000 101%)
+            50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+}
+
+/* MOBILE FOOTER */
+@media only screen and (max-width: 480px) {
+    footer {
+        min-height: 80px;
+    }
+
+    .wavy {
+         height: 200%;
+         top: -200%;
+    }
+}
