@@ -19,15 +19,15 @@
 }
 
 .light {
-    font-family: 'Pathway Extreme Light', 'sans-serif';
+    font-weight: 300;
 }
 
 .medium {
-    font-family: 'Pathway Extreme Medium', 'sans-serif';
+    font-weight: 500;
 }
 
 .extrabold {
-    font-family: 'Pathway Extreme ExtraBold', 'sans-serif';
+    font-weight: 800;
 }
 
 html {
@@ -158,7 +158,6 @@ h1, p {
 
 .first-title {
     font-size: 64px;
-    font-weight: lighter;
 }
 
 .second-title {
